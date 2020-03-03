@@ -19,3 +19,8 @@ sd = lambda d : (sum([(n - sum(d)/len(d))**2 for n in d])/(len(d)))**(1/2)
 ```py
 standardise = lambda d : [(n - sum(n1 for n1 in d)/len(d))/(sum([(n2 - sum(d)/len(d))**2 for n2 in d])/(len(d)))**(1/2) for n in d]
 ```
+
+This method can be substantially shortened via including the mean and sd functions above:
+```py
+standardise = lambda d : [(n - mean(d))/sd(d) for n in d]
+```
