@@ -1,6 +1,10 @@
 # Statistical Methods in One Line
 > Created by Nicholas Ramsay
 
+* Each method is indepedent and relies only on in-built Python3 methods. 
+* The methods utilise python lambda notation to reduce the method from 2 lines to 1 as well as shortening the method via omitting the 'return' keyword.
+* It is important to note that readability is not a concern in this project.
+
 ## Mean
 ```py
 mean = lambda d : sum(n for n in d)/len(d)
