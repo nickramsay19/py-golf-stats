@@ -24,3 +24,19 @@ This method can be substantially shortened via including the mean and sd functio
 ```py
 standardise = lambda d : [(n - mean(d))/sd(d) for n in d]
 ```
+
+## Sum
+```py
+s = lambda d : d[0] + s(d[1:]) if len(d) > 0 else 0
+```
+```py
+s = lambda d : d[0]+(0,s(d[1:]))[bool(len(d))]
+```
+
+The sum function already exists in python, however creating one from scratch can still be interesting.
+
+Also, via the functools module one can:
+```
+import functools
+s = lambda d : functools.reduce(lambda a, b : a + b, d)
+```
