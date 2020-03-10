@@ -36,7 +36,7 @@ s = lambda d : d[0]+(0,s(d[1:]))[bool(len(d))]
 The sum function already exists in python, however creating one from scratch can still be interesting.
 
 Also, via the functools module one can:
-```
+```py
 import functools
 s = lambda d : functools.reduce(lambda a, b : a + b, d)
 ```
